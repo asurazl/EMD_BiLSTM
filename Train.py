@@ -1,5 +1,4 @@
 import os
-import shutil
 import keras
 import numpy as np
 import pandas as pd
@@ -16,7 +15,7 @@ Config.creatFolder()
 # for version param control
 VERSION = Config.VERSION
 # get param
-WINDOW_SIZE, FEATURE_SIZE, PRE_STEP, NUM_TRAIN, NUM_VAL, BATCH_SIZE, EPOCHS = DataProcess.getConfig(VERSION)
+WINDOW_SIZE, FEATURE_SIZE, PRE_STEP, NUM_TRAIN, NUM_VAL, BATCH_SIZE, EPOCHS = Config.getConfig(VERSION)
 # get dataset
 data = pd.read_csv(DATA_PATH, index_col=False, encoding='UTF-8')
 
@@ -25,12 +24,12 @@ imfNum = Config.IMF_NUM
 if DELETE_TRAIN:
     path_logs = Config.PATH_LOGS + 'imf_' + str(imfNum) + '/'
     path_ckpt = Config.PATH_CKPT + 'imf_' + str(imfNum) + '/'
-    if os.path.exists(path_logs):
-        shutil.rmtree(path_logs)
-    os.makedirs(path_logs)
-    if os.path.exists(path_ckpt):
-        shutil.rmtree(path_ckpt)
-    os.makedirs(path_ckpt)
+    if os.path.exists(path_logs) is False:
+        # shutil.rmtree(path_logs)
+        os.makedirs(path_logs)
+    if os.path.exists(path_ckpt) is False:
+        # shutil.rmtree(path_ckpt)
+        os.makedirs(path_ckpt)
 imf = np.array(data.iloc[1:, imfNum:imfNum + 1])
 x_train, y_train, x_val, y_val, y_test, x_test, pm25_min, pm25_max, NUM_TEST = DataProcess.getIMFdata(imf)
 # print dataset num

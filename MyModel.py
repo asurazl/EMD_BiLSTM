@@ -1,13 +1,8 @@
 import tensorflow as tf
 from keras.layers import *
 from keras.models import Model
-from keras.models import Sequential
-from keras.layers import LSTM
-from keras.layers import Dense
-from keras.layers import Bidirectional
-from keras.layers import Flatten
-from keras.layers import TimeDistributed
 from keras.layers.convolutional import Conv1D
+
 
 # hourly model
 def EMD_BiLSTM_hourly(input_shape):
@@ -32,6 +27,7 @@ def EMD_BiLSTM_hourly(input_shape):
     with tf.name_scope('output'):
         outputs = Dense(1)(net)
     return Model(inputs=inputs, outputs=outputs)
+
 
 def getModel(version, input_shape):
     if version == 'hourly':
