@@ -1,6 +1,6 @@
 Based on [Air Quality Predictions with a Semi-Supervised Bidirectional LSTM Neural Network](https://www.doi.org/10.1016/j.apr.2020.09.003) by Zhang et al.
 
-our experiment envs：\
+our experiment envs (environment.yml) mainly contains：\
 CUDA 9.0 \
 tensorflow 1.13.1 or later\
 keras 2.2.4 or later\
