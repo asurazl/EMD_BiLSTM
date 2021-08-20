@@ -22,7 +22,7 @@ Step 3. Run Train.py for training the selected imf data.
 Step 4. Repeat step 2 and 3 until all decompositions are trained.
 
 Step 5. Modify the config param in Config.py\
-    Run Predicted.py for different imf.\
+    Run Predict.py for different imf.\
     Modify line 23 in Predicted.py (choose model param files) 
     
 Step 6. Aggregate all imf results to obtain final PM2.5 predictions.
