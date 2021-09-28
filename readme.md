@@ -1,4 +1,13 @@
 Based on [Air Quality Predictions with a Semi-Supervised Bidirectional LSTM Neural Network](https://www.doi.org/10.1016/j.apr.2020.09.003) by Zhang et al.
+Cite as: Zhang L., Liu P., Zhao L., Wang G., and Liu J. (2020). Air quality predictions with a semi-supervised bidirectional lstm neural network. Atmospheric Pollution Research, 12(1).
+@article{2020Air,
+  title={Air quality predictions with a semi-supervised bidirectional LSTM neural network},
+  author={ Zhang, L.  and  Liu, P.  and  Zhao, L.  and  Wang, G.  and  Liu, J. },
+  journal={Atmospheric Pollution Research},
+  volume={12},
+  number={1},
+  year={2020},
+}
 
 our experiment envs (environment.yml) mainly contains：\
 CUDA 9.0 \
