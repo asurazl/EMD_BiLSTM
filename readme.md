@@ -7,7 +7,7 @@ Cite as: Zhang L., Liu P., Zhao L., Wang G., and Liu J. (2020). Air quality pred
   volume={12},\
   number={1},\
   year={2020},\
-}\
+}
 
 our experiment envs (environment.yml) mainly contains：\
 CUDA 9.0 \
